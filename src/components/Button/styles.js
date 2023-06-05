@@ -17,8 +17,13 @@ ${({ variant })=> variant !== "primary" && css`
 
   background: #E4105D;
 
+  &:hover{
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
     &::after {
-        content: '',
+        content: '';
         position: absolute;
         border: 1px solid #4105D;
         top: -5px;
