@@ -8,25 +8,35 @@ import {
   Menu,
   MenuRight,
   Row,
+  UserPicture,
   Wrapper
 } from './styles.js'
 
-export default function Header() {
+export default function Header({autenticado}) {
   return (
     <Wrapper>
       <Container>
         <Row>
-         
-          <BuscarInputContainer>
-            <Input placeholder='Buscar...' />
-          </BuscarInputContainer>
-          <Menu>Live Code</Menu>
-          <Menu>Global</Menu>
+          {autenticado ? (
+            <>
+              <BuscarInputContainer>
+                <Input placeholder='Buscar...' />
+              </BuscarInputContainer>
+              <Menu>Live Code</Menu>
+              <Menu>Global</Menu>
+            </>
+          ) : null}
         </Row>
         <Row>
-          <MenuRight href="#">Home</MenuRight>
-          <Button title="Entrar"/>
-          <Button title="Cadastrar"/>
+          { !autenticado ? (
+            <>
+              <MenuRight href="#">Home</MenuRight>
+              <Button title="Entrar"/>
+              <Button title="Cadastrar"/>
+            </>
+          ) : (
+            <UserPicture src="https://avatars.githubusercontent.com/u/59034232?v=4" />
+          )}
         </Row>
       </Container>
     </Wrapper>
