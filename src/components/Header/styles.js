@@ -1,18 +1,55 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  width: 100%;
-  max-width: 88%;
-  height: 47px;
 
-  display: flex;
-  justify-content: space-between;
+export const LinkBotao = styled.a`
+  border: 1px solid rgb(255, 255, 255);
+  margin: 0px 0.5rem;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover{
+    background: rgb(150, 40, 181);
+    border: 1px solid rgb(150, 40, 181);
+  }  
+`
+
+export const LinkNormal = styled.a`
+  color: rgb(255, 255, 255);
+  transition: color 0.2s ease-out 0s;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align:center;
+  cursor: pointer;
+  &:hover{
+    color: rgb(150, 40, 181);
+  } 
+`
+
+export const Lista = styled.ul`
+  display:flex;
+  flex-direction: row;
   align-items: center;
-  margin: 0 auto;
-  
-  `
+  margin: 0px 0px 0px auto;
+`
 
-  export const Row = styled.div`
+export const ListaItem = styled.li`
+  text-align:center;
+  padding: 10px 0;
+  margin: 0px 0.5rem;
+  display: list-item;
+  list-style: none;
+`
+
+
+export const Row = styled.div`
   display:flex;
   flex-direction: row;
   align-items: center;
@@ -24,13 +61,21 @@ export const Column = styled.div `
   align-items: center;
 `
 
-export const Wrapper = styled.div `
-  background-color: #151515;
-  width: 100%;
-  height: 63px;
-  display: flex;
-  justify-content: center;
+export const Nav = styled.nav ` 
+  background-color: rgb(21, 21, 21);
+  padding: 1rem;
+  display: block;
+`
+
+export const Container = styled.div`
+display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0px auto;
 `
 
 export const BuscarInputContainer = styled.div `
