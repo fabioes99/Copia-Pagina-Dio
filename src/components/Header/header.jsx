@@ -32,7 +32,7 @@ export default function Header({autenticado}) {
             <>
               <MenuRight href="#">Home</MenuRight>
               <Button title="Entrar"/>
-              <Button title="Cadastrar"/>
+              <Button title="Criar Conta"/>
             </>
           ) : (
             <UserPicture src="https://avatars.githubusercontent.com/u/59034232?v=4" />

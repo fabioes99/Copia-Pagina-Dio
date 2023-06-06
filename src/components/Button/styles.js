@@ -2,36 +2,22 @@ import styled,{css} from 'styled-components';
 
 export const ButtonContainer = styled.button`
 
-background: #565666;
-border-radius: 22px;
-position: relative;
-
-color: #fff;
-padding: 2px 12px;
-min-width: 120px;
-width: 100%;
-
-${({ variant })=> variant !== "primary" && css`
-  min-width:168px;
-  height:36px;
-
-  background: #E4105D;
+  border-radius: 8px;
+  color: #fff;
+  border: 1px solid rgb(127, 40, 181);
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  background: rgb(127, 40, 181);
+  position: relative;
+  text-decoration: none;
+  text-align: center;
 
   &:hover{
     opacity: 0.6;
     cursor: pointer;
-  }
+  }    
+    
+` 
 
-    &::after {
-        content: '';
-        position: absolute;
-        border: 1px solid #4105D;
-        top: -5px;
-        left: -5px;
-        width: calc(100% + 10px);
-        height: calc(100% + 15px);
-        border-radius: 22px;
-    }
-` }
-
-`
