@@ -1,4 +1,4 @@
-import styled,{css} from 'styled-components';
+import styled from 'styled-components';
 
 export const ButtonContainer = styled.button`
 
@@ -15,7 +15,7 @@ export const ButtonContainer = styled.button`
   text-align: center;
 
   &:hover{
-    opacity: 0.6;
+    background: rgb(150, 40, 181);
     cursor: pointer;
   }    
     

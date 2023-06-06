@@ -18,7 +18,7 @@ export const Container = styled.main`
 
 export const LeftHalf = styled.div`
   flex: 2;
- 
+  margin: 3rem 3rem 0;
 `
 
 export const RightHalf = styled.div`
@@ -51,9 +51,13 @@ export const TextContent = styled.p`
   color: #fff;
 `
 
+export const ButtonWrapper = styled.div`
+  margin: 3rem 0;
+`
+
 export const ImageContainer = styled.div`
   width: 100%;
-  height: 480px;
+  height: 465px;
   
   position: absolute;
   z-index: 2;
@@ -71,7 +75,7 @@ export const ImageOverlay = styled.div`
 
 export const Image = styled.div`
   width: 100%;
-  height: 480px;
+  height: 465px;
   position: absolute;
   background: url(${Banner});
   background-size: cover;
