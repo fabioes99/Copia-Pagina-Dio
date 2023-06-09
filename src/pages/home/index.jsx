@@ -5,17 +5,18 @@ import Header from '../../components/Header/header';
 
 import { RightHalf, LeftHalf, Image, Container, ImageContainer,ImageOverlay, TextContent, Title, ButtonWrapper} from './styles'
 
-export default function Home() {
+function Home() {
 
   const navigate = useNavigate();
 
   const handleClickSignIn = () => {
     navigate('/login');
   }
+
+
   return (
-    <>
+    <> 
       <Header/>  
-     
       <ImageContainer>
         <Image />
         <ImageOverlay />
@@ -42,3 +43,6 @@ export default function Home() {
     </>
   )
 }
+
+
+export default Home;

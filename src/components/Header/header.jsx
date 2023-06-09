@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../Button/index.jsx'
+import { useNavigate } from 'react-router-dom';
 
 import {
   BuscarInputContainer,
@@ -16,6 +17,12 @@ import {
 } from './styles.js'
 
 function Header({autenticado}) {
+
+  const navigate = useNavigate();
+
+  const handleClickSignIn = () => {
+    navigate('/login');
+  }
 
   return (
     <Nav>  
@@ -52,7 +59,7 @@ function Header({autenticado}) {
                <LinkNormal>Para Empresas</LinkNormal>
               </ListaItem>
             </Lista>            
-              <LinkBotao>Entrar</LinkBotao>
+              <LinkBotao onclick={ handleClickSignIn  }>Entrar</LinkBotao>
               <Button title="Criar Conta"/>
               <Lista>
                 <ListaItem>

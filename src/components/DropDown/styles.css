@@ -1,0 +1,100 @@
+.Container {
+  top: 22px;
+  left: 0px;
+  position: absolute;
+  width: 568px;
+  z-index: 100;
+  margin: 2rem 0px;
+  animation: 0.5s ease 0s 1 normal both running lbWRkT;
+}
+
+.Wrapper{
+  background: rgb(19, 17, 31);
+  border: 2px solid rgb(39, 34, 53);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.lefthalf{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-self: stretch;
+    width: 100%;
+    background-color: rgb(24, 22, 40);;
+}
+
+.Carreiras{
+     display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 12px 1rem;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    user-select: none;
+    text-align: left;
+    text-decoration: none;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    background-color: rgb(24, 22, 40);
+}
+
+.Carreiras:hover{
+  background-color: rgb(89, 75, 98);
+}
+
+.VerMais{
+    transition: color 0.2s ease-out 0s;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 12px 1rem;
+    text-align: left;
+    width: 100%;
+    color: rgb(127, 40, 181) !important;
+    background-color: transparent;
+
+}
+
+.VerMais:hover {
+  text-decoration: underline;
+}
+
+.RightHalf{
+     display: flex;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-self: stretch;
+    width: 100%;
+}
+
+.Cursos{
+  color: rgb(255, 255, 255);
+  transition: color 0.2s ease-out 0s;
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 12px 1rem;
+  width: 100%;
+  user-select: none;
+  text-align: left;
+}
