@@ -30,7 +30,7 @@ function Home() {
               Domine as tecnologias utilizadas pelas empresas mais inovadoras do mundo e encare seu novo desafio profissional, evoluindo em comunidade com os melhores experts.
             </TextContent>
               <ButtonWrapper>
-                <Button title="Comecar agora" onclick={ handleClickSignIn  }></Button>
+                <Button title="Comecar agora" onClick={ handleClickSignIn  }></Button>
               </ButtonWrapper>
         </LeftHalf>
 

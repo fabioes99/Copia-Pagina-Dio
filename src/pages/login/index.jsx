@@ -26,7 +26,7 @@ export default  function Login() {
 
   console.log(errors, isValid);
 
-  const console = data => console.log(data);
+  const log = data => console.log(data);
 
   const handleClickSignIn = () => {
     navigate('/feed');
@@ -45,7 +45,7 @@ export default  function Login() {
         <Wrapper>
             <TitleLogin>Faça seu cadastro</TitleLogin>
             <SubTitleLogin>Faça seu login e make the change.</SubTitleLogin>
-            <form onSubmit={handleSubmit(console)}>
+            <form onSubmit={handleSubmit(log)}>
               <Input name="email"  control={control} placeholder="E-mail" leftIcon={<MdEmail/>} />
               <Input name="senha"  control={control} placeholder="Senha" type="password" leftIcon={<MdLock/>}/>
               <Button title="Entrar" variant="secondary" onclick={handleClickSignIn} type="submit" />

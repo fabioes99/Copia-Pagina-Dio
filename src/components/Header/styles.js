@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const LinkBotao = styled.a`
+export const LinkBotao = styled.button`
   border: 1px solid rgb(255, 255, 255);
   margin: 0px 0.5rem;
   padding: 6px 16px;
