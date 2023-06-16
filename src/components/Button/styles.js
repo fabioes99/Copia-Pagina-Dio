@@ -1,23 +1,19 @@
 import styled from 'styled-components';
 
 export const ButtonContainer = styled.button`
-
-  border-radius: 8px;
-  color: #fff;
-  border: 1px solid rgb(127, 40, 181);
-  padding: 0.6rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: capitalize;
-  background: rgb(127, 40, 181);
-  position: relative;
-  text-decoration: none;
-  text-align: center;
-
-  &:hover{
-    background: rgb(150, 40, 181);
-    cursor: pointer;
-  }    
+    width: 95%;
+    margin: 2.25rem auto;
+    border-radius: 8px;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(86, 86, 86);
+    transition: all 0.2s ease 0s;
+    cursor: default;
+    opacity: 0.5;
+    background-color: rgb(86, 86, 86);
     
 ` 
 

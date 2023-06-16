@@ -1,0 +1,94 @@
+import React from 'react';
+import  Input  from '../../components/Input';
+import  Button  from '../../components/Button';
+import Header from '../../components/Header/header';
+import { MdEmail, MdLock} from 'react-icons/md'
+import { useNavigate } from 'react-router-dom';
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+import { api } from '../../services/api'
+import Link from '../../components/Link';
+
+import {Form, DivTitle, Column, Container, Body, Row, SubTitleLogin, Title, TitleLogin, Wrapper, Detail, DetailBackground} from './styles'
+
+const schema = yup.object({
+  email: yup.string().email('E-mail nao valido').required('Campo obrigatorio'),
+  senha: yup.string().min(3, 'No minimo 3 caracteres').required('Campo obrigatorio'),
+}).required();
+
+
+
+export default  function SignUp() {
+
+  const navigate = useNavigate();
+
+  const { control, handleSubmit, formState: { errors } } = useForm({
+    resolver: yupResolver(schema),
+    mode: 'onChange'
+  });
+
+
+  const onSubmit = async formData => {
+    try{
+      const { data } = await api.get(`users?email=${formData.email}&senha=${formData.senha}`);
+      if( data.length === 1){
+        navigate('/feed');
+      }else{
+        alert('Email ou senha invalido');
+      }
+    }catch{
+      alert('houve um erro');
+    }
+  }
+
+  const handleClickSignIn = () => {
+    navigate('/feed');
+  }
+
+  return (
+    <>
+      <Header/>
+      <Container>
+        <Body>
+        <Column>
+            <Detail>
+              <DetailBackground />
+            </Detail>
+            <Title>
+             A plataforma para voce aprender com expert, dominar as principais tecnologias e entrar mais rapido nas empresas mais desejadas.
+            </Title>
+            <p style={{ marginTop: '2.4rem' }}> <Link nome={'VOLTAR PARA LOGIN'} link={'/login'} color={'rgb(127, 40, 181)'} /></p>
+           
+        </Column>
+        <Column>
+        <Wrapper>
+            <DivTitle>
+              <Detail>
+                <DetailBackground />
+              </Detail>
+              <TitleLogin>Comece agora gratis</TitleLogin>
+            </DivTitle>
+            
+            <Form onSubmit={handleSubmit(onSubmit)}>
+              <SubTitleLogin>Crie sua conta e make the change.</SubTitleLogin>
+              <Input name="nome"    errorMessage={( errors.email ? errors.email.message : null  )}  control={control} placeholder="Nome completo" leftIcon={<MdEmail/>} />
+              <Input name="email"   errorMessage={( errors.email ? errors.email.message : null  )}  control={control} placeholder="Seu melhor @e-mail" leftIcon={<MdEmail/>} />
+              <Input name="celular" errorMessage={( errors.email ? errors.email.message : null  )}  control={control} placeholder="Celular ex:(11) 96123-4567" leftIcon={<MdEmail/>} />
+              <Input name="senha"   errorMessage={( errors.senha ? errors.senha.message : null  )}  control={control} placeholder="Senha" type="password" leftIcon={<MdLock/>}/>
+              <Button title="Criar minha conta gratis" variant="secondary" onclick={handleClickSignIn} type="submit" />
+            </Form>
+            <p style={{ fontSize: '0.8rem' }}>
+              Ao clicar em "criar minha conta gratis", declaro que aceito as <Link nome={'Politicas de Privacidade'} link={'/login'} color={'rgb(127, 40, 181)'} />  e os <Link nome={'Termos de Uso'} link={'/login'} color={'rgb(127, 40, 181)'} /> da DIO.
+            </p>
+            
+            <p style={{ marginTop: '2.2rem' }}> Ja tenho conta. <Link nome={'Fazer login.'} link={'/login'} color={'#22DD7A'} /></p>
+             
+        </Wrapper>
+        </Column>
+        </Body>
+       
+      </Container>
+    </>
+  )
+}

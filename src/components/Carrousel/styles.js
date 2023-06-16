@@ -13,8 +13,8 @@ export const ContainerCarrossel = styled.div`
     background: rgb(22, 18, 33);
     border-radius: 8px;
     transition: all 150ms linear 0s;
-    min-width: 368px;
-    max-width: 368px;
+    width: 370px;
+    height: 580px;
 `
 
 export const TituloCarrossel = styled.h3`

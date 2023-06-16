@@ -3,13 +3,16 @@ import styled from "styled-components";
 
 export const InputContainer = styled.div`
   width:100%;
-  max-width: 275px;
   height: 30px;
-  border-bottom: 1px solid #3B3450;
-
+  border-bottom: 2px solid black;
+  transition: border-bottom 0.3s ease;
   display: flex;
   align-items: center;
   margin-bottom: 28px;
+
+  &.clicked {
+    border-bottom-color: rgb(127, 40, 181);
+  }
 `
 
 
