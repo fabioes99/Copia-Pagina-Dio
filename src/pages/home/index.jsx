@@ -1,9 +1,9 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import Button  from '../../components/Button';
 import Header from '../../components/Header/header';
+import Carrousel from '../../components/Carrousel';
 
-import { RightHalf, LeftHalf, Image, Container, ImageContainer,ImageOverlay, TextContent, Title, ButtonWrapper} from './styles'
+import {LinkBotao, PurpleLetter, ParagrafoCarrossel, WrapperCarrossel, TituloCarrosel, RightHalf, LeftHalf, Image, Container, ImageContainer,ImageOverlay, TextContent, Title, ButtonWrapper} from './styles'
 
 function Home() {
 
@@ -30,16 +30,24 @@ function Home() {
               Domine as tecnologias utilizadas pelas empresas mais inovadoras do mundo e encare seu novo desafio profissional, evoluindo em comunidade com os melhores experts.
             </TextContent>
               <ButtonWrapper>
-                <Button title="Comecar agora" onClick={ handleClickSignIn  }></Button>
+                <LinkBotao >Comecar agora</LinkBotao>
               </ButtonWrapper>
         </LeftHalf>
-
-        <RightHalf>
-
-        </RightHalf>
-        
+        <RightHalf/>
       </Container>
       </ImageContainer>
+      <WrapperCarrossel>
+        <TituloCarrosel>
+          Explore nossas <PurpleLetter>carreiras</PurpleLetter>
+        </TituloCarrosel>
+        <ParagrafoCarrossel>
+          Desbloqueie o seu proximo nivel de conhecimento e seja contratado pelas maiores empresas de tecnologia do pais
+        </ParagrafoCarrossel>
+      </WrapperCarrossel>
+
+      <Carrousel>
+
+      </Carrousel>
     </>
   )
 }

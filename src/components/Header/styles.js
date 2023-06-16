@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 
-export const LinkBotao = styled.button`
+export const LinkBotao = styled.a`
   border: 1px solid rgb(255, 255, 255);
   margin: 0px 0.5rem;
-  padding: 6px 16px;
+  padding: 4px 16px;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: bold;
@@ -20,6 +20,27 @@ export const LinkBotao = styled.button`
     border: 1px solid rgb(150, 40, 181);
   }  
 `
+
+export const LinkBotaoRoxo = styled.a`
+  border-radius: 8px;
+  color: #fff;
+  border: 1px solid rgb(127, 40, 181);
+  padding: 0.3rem 1.1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  background: rgb(127, 40, 181);
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 0.5rem;
+
+  &:hover{
+    background: rgb(150, 40, 181);
+    cursor: pointer;
+  }   
+`
+
 
 export const LinkNormal = styled.a`
   color: rgb(255, 255, 255);
@@ -37,16 +58,35 @@ export const Lista = styled.ul`
   display:flex;
   flex-direction: row;
   align-items: center;
-  margin: 0px 0px 0px auto;
+  margin: 0px 0px 0px 15px;
 `
 
 export const ListaItem = styled.li`
   text-align:center;
   padding: 10px 0;
-  margin: 0px 0.5rem;
+  margin: 0px 0.3rem;
   display: list-item;
   list-style: none;
+
+  &:hover {
+    cursor: pointer;
+   
+  }
 `
+
+export const Button = styled.button`
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+  transition: filter 0.4s ease 0s;
+  filter: grayscale(100%);
+
+  &:hover {
+    cursor: pointer;
+    filter: none;
+  }
+`
+
 
 
 export const Row = styled.div`

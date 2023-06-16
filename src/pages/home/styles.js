@@ -19,6 +19,7 @@ export const Container = styled.main`
 export const LeftHalf = styled.div`
   flex: 2;
   margin: 3rem 3rem 0;
+  padding-left: 40px;
 `
 
 export const RightHalf = styled.div`
@@ -81,3 +82,54 @@ export const Image = styled.div`
   background-size: cover;
   background-position: center;
 `;
+
+export const WrapperCarrossel = styled.div`
+  margin-top: 480px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(30, 25, 44);
+  padding: 0px 1.5rem;
+`
+
+export const TituloCarrosel = styled.h1`
+  font-size: 42px;
+  text-align: center;
+  margin: 0.6em 0px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+`
+
+export const ParagrafoCarrossel = styled.p`
+  margin: 1.5rem 0px 4rem;
+  max-width: 640px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  line-height: 150%;
+`
+
+export const PurpleLetter = styled.span`
+  color: rgb(127, 40, 181);
+`
+
+
+export const LinkBotao = styled.a`
+  border-radius: 8px;
+  color: #fff;
+  border: 1px solid rgb(127, 40, 181);
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  background: rgb(127, 40, 181);
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+
+  &:hover{
+    background: rgb(150, 40, 181);
+    cursor: pointer;
+  }   
+`
