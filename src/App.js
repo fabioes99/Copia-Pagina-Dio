@@ -1,7 +1,7 @@
 import Home from "./pages/home";
 import Login from "./pages/login";
 import Feed from "./pages/feed";
-import Teste from "./pages/teste.jsx";
+import Teste from "./pages/teste";
 import React, { useEffect, useState } from 'react';
 import SignUp from "./pages/sign-up";
 import {
@@ -9,7 +9,7 @@ import {
   Routes,
   Route
 } from 'react-router-dom'
-import FontFaceObserver from 'fontfaceobserver';
+import FontFaceObserver from 'fontfaceobserver'; 
 
 function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);

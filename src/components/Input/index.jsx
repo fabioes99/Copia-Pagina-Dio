@@ -19,13 +19,13 @@ export default function Input({leftIcon, name , control, errorMessage, mudacor, 
       if (inputRef.current && !inputRef.current.contains(event.target)) {
         setClicked(false);
       }
-    };
+    }
 
     document.addEventListener('mousedown', handleOutsideClick);
 
     return () => {
       document.removeEventListener('mousedown', handleOutsideClick);
-    };
+    }
   }, []);
 
 
@@ -41,6 +41,7 @@ export default function Input({leftIcon, name , control, errorMessage, mudacor, 
             <InputText
               onClick={handleClick}
               onBlur={handleBlur}
+
               {...field}
               {...rest}
             />

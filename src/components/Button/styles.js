@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const ButtonContainer = styled.button`
     width: 95%;
@@ -13,7 +13,28 @@ export const ButtonContainer = styled.button`
     transition: all 0.2s ease 0s;
     cursor: default;
     opacity: 0.5;
-    background-color: rgb(86, 86, 86);
+    background-color: transparent;
+
+    ${props =>
+        !props.disabled &&
+        css`
+          cursor: pointer;
+        `
+      }
+
+    &:hover{
+        background-color: rgb(86, 86, 86);
+    }
+
+
+    ${props =>
+        props.disabled &&
+        css`
+            opacity: 0.5;
+            background-color: rgb(86, 86, 86);
+            cursor: default;
+        `
+      }
     
 ` 
 

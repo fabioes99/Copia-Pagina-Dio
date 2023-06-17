@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import  Input  from '../../components/Input';
 import  Button  from '../../components/Button';
 import Header from '../../components/Header/header';
@@ -10,27 +10,34 @@ import * as yup from "yup";
 import { api } from '../../services/api'
 import Link from '../../components/Link';
 
-import {Form, DivTitle, Column, Container, Body, Row, SubTitleLogin, Title, TitleLogin, Wrapper, Detail, DetailBackground} from './styles'
+import {Form, DivTitle, Column, Container, Body, SubTitleLogin, Title, TitleLogin, Wrapper, Detail, DetailBackground} from './styles'
 
 const schema = yup.object({
   email: yup.string().email('E-mail nao valido').required('Campo obrigatorio'),
   senha: yup.string().min(3, 'No minimo 3 caracteres').required('Campo obrigatorio'),
+  telefone: yup.string()
+    .matches(/^\d{10}$/, 'O número de telefone deve ter 10 dígitos')
+    .required('O número de telefone é obrigatório'),
+    nome: yup.string().required('O nome é obrigatório')
 }).required();
-
 
 
 export default  function SignUp() {
 
   const navigate = useNavigate();
 
-  const { control, handleSubmit, formState: { errors } } = useForm({
+  const { control, handleSubmit, formState: { errors }, watch } = useForm({
     resolver: yupResolver(schema),
     mode: 'onChange'
   });
 
+  const testValue = watch(['nome','email','telefone','senha']);
 
-  const onSubmit = async formData => {
-    try{
+  const allElementsValid = testValue.every((element) => element !== '' && element !== undefined);
+
+  const onSubmit = async data => {
+    console.log(data);
+   /* try{
       const { data } = await api.get(`users?email=${formData.email}&senha=${formData.senha}`);
       if( data.length === 1){
         navigate('/feed');
@@ -39,12 +46,13 @@ export default  function SignUp() {
       }
     }catch{
       alert('houve um erro');
-    }
+    } */
   }
 
   const handleClickSignIn = () => {
     navigate('/feed');
   }
+
 
   return (
     <>
@@ -72,16 +80,15 @@ export default  function SignUp() {
             
             <Form onSubmit={handleSubmit(onSubmit)}>
               <SubTitleLogin>Crie sua conta e make the change.</SubTitleLogin>
-              <Input name="nome"    errorMessage={( errors.email ? errors.email.message : null  )}  control={control} placeholder="Nome completo" leftIcon={<MdEmail/>} />
-              <Input name="email"   errorMessage={( errors.email ? errors.email.message : null  )}  control={control} placeholder="Seu melhor @e-mail" leftIcon={<MdEmail/>} />
-              <Input name="celular" errorMessage={( errors.email ? errors.email.message : null  )}  control={control} placeholder="Celular ex:(11) 96123-4567" leftIcon={<MdEmail/>} />
-              <Input name="senha"   errorMessage={( errors.senha ? errors.senha.message : null  )}  control={control} placeholder="Senha" type="password" leftIcon={<MdLock/>}/>
-              <Button title="Criar minha conta gratis" variant="secondary" onclick={handleClickSignIn} type="submit" />
+              <Input name="nome"      errorMessage={( errors.nome ? errors.nome.message : null  )}  control={control} placeholder="Nome completo" leftIcon={<MdEmail/>} />
+              <Input name="email"     errorMessage={( errors.email ? errors.email.message : null  )}  control={control} placeholder="Seu melhor @e-mail" leftIcon={<MdEmail/>} />
+              <Input name="telefone"  errorMessage={( errors.telefone ? errors.telefone.message : null  )}  control={control} placeholder="Celular ex:(11) 96123-4567" leftIcon={<MdEmail/>} />
+              <Input name="senha"     errorMessage={( errors.senha ? errors.senha.message : null  )}  control={control} placeholder="Senha" type="password" leftIcon={<MdLock/>}/>
+              <Button isButtonEnabled={allElementsValid} title="Criar minha conta gratis" onclick={handleClickSignIn} type={"submit"} />
             </Form>
             <p style={{ fontSize: '0.8rem' }}>
               Ao clicar em "criar minha conta gratis", declaro que aceito as <Link nome={'Politicas de Privacidade'} link={'/login'} color={'rgb(127, 40, 181)'} />  e os <Link nome={'Termos de Uso'} link={'/login'} color={'rgb(127, 40, 181)'} /> da DIO.
             </p>
-            
             <p style={{ marginTop: '2.2rem' }}> Ja tenho conta. <Link nome={'Fazer login.'} link={'/login'} color={'#22DD7A'} /></p>
              
         </Wrapper>
