@@ -1,10 +1,9 @@
 import React from 'react'
-import { faCircleQuestion, faBell, faHeart, faLoader } from '@fortawesome/free-solid-svg-icons';
+import { faCircleQuestion, faBell, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Spinner } from "phosphor-react";
 
 import {
-  LinkBotao,
   UserPicture,
   Header,
   LinkNormal,

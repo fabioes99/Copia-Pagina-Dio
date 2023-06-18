@@ -2,24 +2,100 @@ import styled from "styled-components";
 import Banner from '../../assets/banner-play.png'
 
 export const Container = styled.main`
-
-  max-width: 1200px;
   display: flex;
-  flex-direction: row;
-  -webkit-box-pack: start;
-  justify-content: flex-start;
-  width: 100%;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 35px;
  
-
-  position: relative;
-  z-index: 4;
 `
 
 export const LeftHalf = styled.div`
-  flex: 2;
-  margin: 3rem 3rem 0;
-  padding-left: 40px;
+  flex: 0 0 25%;
+  max-width: 25%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+`
+
+export const PerfilLink = styled.a`
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: space-between;
+  padding-top: 0.25rem!important;
+  margin-bottom: 0.5rem!important;
+  margin-right: 0.25rem!important;
+  padding-bottom: 0.25rem!important;
+  padding-right: 0.5rem!important;
+
+  &:hover{
+    background-color: #2E343B;
+    border-radius: 7px;
+  }
+`
+
+export const ProfileSpotlight = styled.div`
+
+`
+
+export const UserPicture = styled.img`
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid green;
+`
+
+export const Nome = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0.6rem;
+`
+export const Nivel = styled.span`
+  border-radius: 10rem;
+  color:white;
+  background-color: #00af00;
+  font-size: 75%;
+  font-weight: 700;
+  padding: 2px 10px;
+  margin-left: 1rem;
+`
+
+export const NomeCompleto = styled.h5`
+  font-size: 1.09375rem;
+  line-height: 1.32;
+  font-weight: 700;
+  color:white;
+`
+
+export const Xperience = styled.h5`
+  color:white;
+  font-weight: 500;
+`
+
+export const WrapperSwitch = styled.div`
+  margin: 1rem 0px 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid rgb(45, 45, 55);
+  border-radius: 5px;
+  padding: 0.7rem 0px;
+`
+
+export const LinkPerfil = styled.a`
+  background-color: rgb(85, 33, 118);
+  margin: 1rem 0px 1.5rem;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 0.7rem 0.7rem 0.7rem 1rem;
+  color:white;
+  text-decoration: none;
+
+  &:hover{
+    background-color:#7A31A7;
+  }
 `
 
 export const RightHalf = styled.div`
@@ -56,23 +132,6 @@ export const ButtonWrapper = styled.div`
   margin: 3rem 0;
 `
 
-export const ImageContainer = styled.div`
-  width: 100%;
-  height: 465px;
-  
-  position: absolute;
-  z-index: 2;
-`
-
-export const ImageOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background: linear-gradient(99.06deg, rgb(0, 0, 0) 45.8%, rgba(0, 0, 0, 0) 90.54%);
-`
 
 export const Image = styled.div`
   width: 100%;
@@ -83,32 +142,6 @@ export const Image = styled.div`
   background-position: center;
 `;
 
-export const WrapperCarrossel = styled.div`
-  margin-top: 480px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(30, 25, 44);
-  padding: 0px 1.5rem;
-`
-
-export const TituloCarrosel = styled.h1`
-  font-size: 42px;
-  text-align: center;
-  margin: 0.6em 0px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-`
-
-export const ParagrafoCarrossel = styled.p`
-  margin: 1.5rem 0px 4rem;
-  max-width: 640px;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  line-height: 150%;
-`
 
 export const PurpleLetter = styled.span`
   color: rgb(127, 40, 181);
