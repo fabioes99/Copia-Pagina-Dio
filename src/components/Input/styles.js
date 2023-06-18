@@ -30,7 +30,13 @@ export const InputText = styled.input`
 `
 
 export const ErrorText = styled.p`
-  color: #ff0000;
-  font-size: 12px;
-  margin: 5px 0;
+  font-size: 0.825rem;
+  background-color: rgb(255, 15, 58);
+  color: rgb(255, 255, 255);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  width: 900px;
+}
 `

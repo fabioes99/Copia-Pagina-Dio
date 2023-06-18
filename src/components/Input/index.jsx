@@ -41,14 +41,14 @@ export default function Input({leftIcon, name , control, errorMessage, mudacor, 
             <InputText
               onClick={handleClick}
               onBlur={handleBlur}
-
               {...field}
               {...rest}
             />
           )}
         />
+         { errorMessage ? <ErrorText>{errorMessage}</ErrorText> : null}
       </InputContainer>
-      {errorMessage ? <ErrorText>{errorMessage}</ErrorText> : null}
+     
     </>
       
   )

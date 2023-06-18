@@ -34,6 +34,7 @@ function App() {
         <Route path="/feed" element={<Feed />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/teste" element={<Teste />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </Router>
   );

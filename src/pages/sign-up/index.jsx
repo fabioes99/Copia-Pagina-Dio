@@ -16,9 +16,9 @@ const schema = yup.object({
   email: yup.string().email('E-mail nao valido').required('Campo obrigatorio'),
   senha: yup.string().min(3, 'No minimo 3 caracteres').required('Campo obrigatorio'),
   telefone: yup.string()
-    .matches(/^\d{10}$/, 'O número de telefone deve ter 10 dígitos')
-    .required('O número de telefone é obrigatório'),
-    nome: yup.string().required('O nome é obrigatório')
+    .matches(/^\d{10}$/, 'Numero de telefone invalido')
+    .required('O número de telefone e obrigatório'),
+    nome: yup.string().required('O nome e obrigatorio')
 }).required();
 
 
@@ -28,7 +28,7 @@ export default  function SignUp() {
 
   const { control, handleSubmit, formState: { errors }, watch } = useForm({
     resolver: yupResolver(schema),
-    mode: 'onChange'
+    mode: 'onSubmit'
   });
 
   const testValue = watch(['nome','email','telefone','senha']);
