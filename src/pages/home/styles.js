@@ -106,7 +106,7 @@ export const Title = styled.h2`
 
   font-style:normal;
   font-weight: bold;
-  font-size: 56px;
+  font-size: 26px;
   margin: 1.5rem 0;
   line-height: 1.15;
   position: relative;
@@ -165,4 +165,21 @@ export const LinkBotao = styled.a`
     background: rgb(150, 40, 181);
     cursor: pointer;
   }   
+`
+
+
+export const TitleHighlight = styled.h3`
+
+  font-style:normal;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 24px;
+  line-height: 25px;
+
+  color: #FFFFFF80;
+`
+
+export const Column = styled.p`
+  padding-right: 30px;
+  flex: ${({ flex }) => flex };
 `

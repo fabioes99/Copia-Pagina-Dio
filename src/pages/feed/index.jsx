@@ -1,7 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-
-import  Button  from '../../components/Button';
 import  Card  from '../../components/Card';
 import Header from '../../components/Header/header';
 import Ranking from '../../components/Ranking';
