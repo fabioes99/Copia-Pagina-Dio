@@ -1,10 +1,12 @@
 import React from 'react'
-import { faCircleQuestion, faBell, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Spinner } from "phosphor-react";
+import DropdownHome from '../../components/DropDownHome';
+import DropdownPerfil from '../../components/DropDownHome/perfil';
+import DropdownHeart from '../DropDownHome/heart';
 
 import {
-  UserPicture,
   Header,
   LinkNormal,
   Lista, 
@@ -13,8 +15,6 @@ import {
   Botoes,
   LoadingLeft,
   LoadingRight,
-  DivCoracao,
-  NCoracao,
   LinkBotaoAmarelo,
   LinkAmarelo,
   Image,
@@ -52,16 +52,13 @@ function HeaderLogin({autenticado}) {
         </Lista>            
       </Nav>
       <Botoes>
-        <div>
-          <FontAwesomeIcon icon={faCircleQuestion} size='xl' style={{"--fa-secondary-color": "#ffffff",}} />
-        </div>
+        <DropdownHome />
         <Sino>
           <FontAwesomeIcon icon={faBell} size='xl' style={{color: "#ededed",}} />
         </Sino>
-        <DivCoracao><FontAwesomeIcon icon={faHeart} size='xl' style={{color: "#ce2222",}} /><NCoracao>5</NCoracao></DivCoracao>
-         <UserPicture src="https://avatars.githubusercontent.com/u/59034232?v=4" />
+        <DropdownHeart />
+        <DropdownPerfil />
       </Botoes>
-           
     </Header>
   )
 }

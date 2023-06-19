@@ -4,7 +4,7 @@ button {
 }
 
 .SwitchRoot {
-  width: 45px;
+  width: 40px;
   height: 20px;
   background-color: gray;
   border-radius: 9999px;
@@ -29,11 +29,12 @@ button {
   margin-left: 2px;
 }
 .SwitchThumb[data-state='checked'] {
-  transform: translateX(23px);
+  transform: translateX(18px);
 }
 
 .Label {
   color: white;
   font-size: 15px;
   line-height: 1;
+  padding-left: 4px;
 }

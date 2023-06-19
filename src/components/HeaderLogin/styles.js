@@ -109,30 +109,7 @@ export const Botoes = styled.div`
   margin-left: auto;
   padding-right: 1rem;
 `
-
-export const DivCoracao = styled.div`
-  position: relative;
-  background-color: rgb(54, 53, 55);
-  padding: 7px 18px;
-  border-radius: 25px;
-  margin: 0px 0.7rem 0px 0.5rem !important;
-`
-
-export const NCoracao = styled.span`
-  font-size: 1rem;
-  font-weight: 700;
-  margin-left: 0.5rem;
-  color: rgb(250, 250, 250) !important;
-`
-
 export const Sino = styled.div`
- margin-right: 1rem;
- margin-left: 1.5rem;
+  margin-right: 1rem;
 `
 
-export const UserPicture = styled.img`
-  width:40px;
-  height:40px;
-  border-radius: 22px;
-  border: 3px solid green;
-`

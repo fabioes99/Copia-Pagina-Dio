@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import Banner from '../../assets/banner-play.png'
 
 export const Container = styled.main`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 35px;
+  margin-top: 2.7rem;
  
 `
 
@@ -13,7 +12,6 @@ export const LeftHalf = styled.div`
   max-width: 25%;
   position: relative;
   width: 100%;
-  padding-right: 15px;
 `
 
 export const PerfilLink = styled.a`
@@ -22,11 +20,7 @@ export const PerfilLink = styled.a`
   flex-wrap: wrap;
   height: auto;
   justify-content: space-between;
-  padding-top: 0.25rem!important;
-  margin-bottom: 0.5rem!important;
-  margin-right: 0.25rem!important;
-  padding-bottom: 0.25rem!important;
-  padding-right: 0.5rem!important;
+  padding: 0.5rem 0;
 
   &:hover{
     background-color: #2E343B;
@@ -34,13 +28,21 @@ export const PerfilLink = styled.a`
   }
 `
 
-export const ProfileSpotlight = styled.div`
+export const Info  = styled.div`
+  padding-right: 2rem;
+`
 
+export const WrapperUser = styled.div`
+  padding-left: 1.5rem;
+`
+
+export const ProfileSpotlight = styled.div`
+  margin-left: 1.3rem;
 `
 
 export const UserPicture = styled.img`
-  width: 64px;
-  height: 64px;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   border: 3px solid green;
 `
@@ -92,6 +94,7 @@ export const LinkPerfil = styled.a`
   padding: 0.7rem 0.7rem 0.7rem 1rem;
   color:white;
   text-decoration: none;
+  line-height: 28px;
 
   &:hover{
     background-color:#7A31A7;
@@ -132,21 +135,9 @@ export const ButtonWrapper = styled.div`
   margin: 3rem 0;
 `
 
-
-export const Image = styled.div`
-  width: 100%;
-  height: 465px;
-  position: absolute;
-  background: url(${Banner});
-  background-size: cover;
-  background-position: center;
-`;
-
-
 export const PurpleLetter = styled.span`
   color: rgb(127, 40, 181);
 `
-
 
 export const LinkBotao = styled.a`
   border-radius: 8px;
