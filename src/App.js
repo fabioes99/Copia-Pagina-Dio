@@ -1,6 +1,6 @@
 import Home from "./pages/home";
 import Login from "./pages/login";
-import Teste from "./pages/teste";
+import Teste from "./pages/home/Carrousel";
 import React, { useEffect, useState } from 'react';
 import SignUp from "./pages/sign-up";
 import {

@@ -4,7 +4,7 @@ import './styles.css';
 
 import { ContainerCarrossel, TituloCarrossel, SpanCarrossel, Atividade, ContainerAtividade, LinkBotao } from './styles'
 
-function MyCarousel() {
+function Teste() {
 
   const responsive = {
     superLargeDesktop: {
@@ -125,9 +125,49 @@ function MyCarousel() {
           VerCarreira
         </LinkBotao>
       </ContainerCarrossel>
-
-
-
+      <ContainerCarrossel>
+        <TituloCarrossel>
+        Carreira <br />Back-end
+        </TituloCarrossel>
+        <SpanCarrossel>
+          Formacao Java Developer
+        </SpanCarrossel>
+        <SpanCarrossel>
+          Formacao .NET Developer
+        </SpanCarrossel>
+        <SpanCarrossel>
+          Formacao Python Developer
+        </SpanCarrossel>
+        <SpanCarrossel>
+          Formacao TypeScript Fullstack Developer
+        </SpanCarrossel>
+        <SpanCarrossel>
+          Formacao PHP Experience
+        </SpanCarrossel>
+        <SpanCarrossel>
+          Formacao PHP Developer
+        </SpanCarrossel>
+        <SpanCarrossel>
+          Formacao Ruby Developer
+        </SpanCarrossel>
+        <SpanCarrossel>
+          Formacao Programacao Reativa com Spring WebFlux
+        </SpanCarrossel>
+        <SpanCarrossel>
+          Formacao C/C++ Developer
+        </SpanCarrossel>
+        <ContainerAtividade>
+          <Atividade>
+            0 atividades
+          </Atividade>
+          <Atividade>
+            0 projetos
+          </Atividade>
+        </ContainerAtividade>
+        <LinkBotao>
+          VerCarreira
+        </LinkBotao>
+      </ContainerCarrossel>
 
       <ContainerCarrossel>
         <TituloCarrossel>
@@ -173,9 +213,6 @@ function MyCarousel() {
         </LinkBotao>
       </ContainerCarrossel>
 
-
-
-
       <ContainerCarrossel>
         <TituloCarrossel>
         Carreira <br />Back-end
@@ -219,103 +256,9 @@ function MyCarousel() {
           VerCarreira
         </LinkBotao>
       </ContainerCarrossel>
-
-
-
-
-      <ContainerCarrossel>
-        <TituloCarrossel>
-        Carreira <br />Back-end
-        </TituloCarrossel>
-        <SpanCarrossel>
-          Formacao Java Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao .NET Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao Python Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao TypeScript Fullstack Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao PHP Experience
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao PHP Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao Ruby Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao Programacao Reativa com Spring WebFlux
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao C/C++ Developer
-        </SpanCarrossel>
-        <ContainerAtividade>
-          <Atividade>
-            0 atividades
-          </Atividade>
-          <Atividade>
-            0 projetos
-          </Atividade>
-        </ContainerAtividade>
-        <LinkBotao>
-          VerCarreira
-        </LinkBotao>
-      </ContainerCarrossel>
-
-
-
-      <ContainerCarrossel>
-        <TituloCarrossel>
-        Carreira <br />Back-end
-        </TituloCarrossel>
-        <SpanCarrossel>
-          Formacao Java Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao .NET Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao Python Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao TypeScript Fullstack Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao PHP Experience
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao PHP Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao Ruby Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao Programacao Reativa com Spring WebFlux
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao C/C++ Developer
-        </SpanCarrossel>
-        <ContainerAtividade>
-          <Atividade>
-            0 atividades
-          </Atividade>
-          <Atividade>
-            0 projetos
-          </Atividade>
-        </ContainerAtividade>
-        <LinkBotao>
-          VerCarreira
-        </LinkBotao>
-      </ContainerCarrossel>
-
 
     </Carousel>
   );
 }
 
-export default MyCarousel;
+export default Teste;

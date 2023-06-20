@@ -6,11 +6,13 @@ export const CardContainer = styled.div`
   background-color: #3B4651;
   position: relative;
   margin-bottom: 25px;
+  border-radius: 5px;
 `
 
 export const ImageBackground = styled.img`
   width: 100%;
   height: 180px;
+  border-radius: 5px;
 `
 
 

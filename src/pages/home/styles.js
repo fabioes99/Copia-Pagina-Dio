@@ -159,17 +159,6 @@ export const LinkBotao = styled.a`
 `
 
 
-export const TitleHighlight = styled.h3`
-
-  font-style:normal;
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 24px;
-  line-height: 25px;
-
-  color: #FFFFFF80;
-`
-
 export const Column = styled.p`
   padding-right: 30px;
   flex: ${({ flex }) => flex };
