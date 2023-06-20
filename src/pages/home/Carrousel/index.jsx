@@ -7,7 +7,7 @@ import { ButtonRight, ButtonLeft } from './styles'
 import Item from './Item';
 
 
-function Teste() {
+function MyCarousel() {
 
   const responsive = {
     superLargeDesktop: {
@@ -66,4 +66,4 @@ function Teste() {
   );
 }
 
-export default Teste;
+export default MyCarousel;

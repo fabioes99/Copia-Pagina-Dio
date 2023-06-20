@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Container = styled.main`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2.7rem;
+  padding-top: 2.7rem;
+  background-color: #15161B;
  
 `
 
@@ -158,8 +159,84 @@ export const LinkBotao = styled.a`
   }   
 `
 
-
 export const Column = styled.p`
   padding-right: 30px;
   flex: ${({ flex }) => flex };
+`
+
+export const MeusCursos = styled.div`
+  margin-bottom: 3rem;
+`
+
+export const LinkCurso = styled.a`
+  display: flex;
+  flex-direction: row;
+  padding: 12px 10px;
+ 
+  &:hover{
+    background-color: #2E343B;
+    border-radius: 7px;
+  }
+`
+export const Img = styled.img`
+  width: 30px;
+`
+
+export const TituloCurso = styled.h5`
+  margin-left: 0.5rem;
+  font-size: 1.09375rem;
+`
+
+export const BotaoBranco = styled.a`
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  font-weight: 700;
+  width: 100%;
+  font-size: 0.875rem;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  text-align:center;
+  margin-bottom: 1rem;
+
+  &:hover{
+    cursor: pointer;
+    color: black;
+    background-color: white;
+  }
+`
+
+export const WrapperBotao = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`
+
+export const Badge = styled.img`
+  width: 70px;
+  max-width: 100%;
+  height: 70px;
+  border-radius: 50px;
+`
+
+export const Section = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+export const Paragrafo = styled.p`
+  font-style: italic; 
+  color: rgb(122, 134, 154);
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+`
+export const ContainerProgress = styled.div`
+  margin: 1rem 0;
+`
+
+export const Teste = styled.div`
+position: absolute;
+z-index: 999;
+left: 94px;
+top: 391px;
 `

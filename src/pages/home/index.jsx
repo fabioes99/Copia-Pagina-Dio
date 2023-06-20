@@ -6,9 +6,12 @@ import { CaretRight } from 'phosphor-react';
 import  Card  from '../../components/Card';
 import Ranking from '../../components/Ranking';
 import PinkTag from '../../components/PinkTag';
-import Teste from './Carrousel/index'
+import MyCarousel from './Carrousel/index';
+import ProgressBadge from './Progress';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
-import {ProfileSpotlight, Info, WrapperUser, PerfilLink, Nome, Nivel, NomeCompleto, Xperience, WrapperSwitch, LinkPerfil, Column, LeftHalf, TitleHighlight, Container, TextContent, Title, ButtonWrapper, UserPicture} from './styles'
+import {ProfileSpotlight, LinkCurso, Teste, Img, BotaoBranco, ContainerProgress, WrapperBotao, Paragrafo, Section, Badge, TituloCurso, Info, WrapperUser, PerfilLink, Nome, Nivel, NomeCompleto, Xperience, WrapperSwitch, LinkPerfil, Column, MeusCursos, Container, Title, UserPicture} from './styles'
 import BotaoCurso from '../../components/BotaoCurso';
 
 
@@ -18,7 +21,7 @@ function Home() {
     <> 
       <HeaderLogin/>
       <Container>
-      <Column flex={1.7}>
+      <Column flex={1.6}>
         <PerfilLink href='/'> 
         <WrapperUser>
           <UserPicture src="https://avatars.githubusercontent.com/u/59034232?v=4" />
@@ -39,17 +42,60 @@ function Home() {
             <SwitchDemo/>
           </WrapperSwitch>
           <LinkPerfil href='/'>Visualizar meu Perfil <CaretRight size={26} color="white" /></LinkPerfil>
-        </ProfileSpotlight>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+
+          <div>
+            <p>Forca do perfil na DIO: <strong>SILVER</strong></p>
+            <ContainerProgress>
+              <FontAwesomeIcon icon={faStar} size='xl' style={{color: "#ededed", position: "absolute", zIndex: "999", left: "94px",top: "391px",}} />
+              <FontAwesomeIcon icon={faStar} size='xl' style={{color: "#1D222C", position: "absolute", zIndex: "999", left: "308px",top: "391px"}} />
+              <ProgressBadge />
+            </ContainerProgress>
+            <Section>
+              <Badge src="https://hermes.dio.me/assets/profile-force/silver.png" />
+              <div>
+                <Paragrafo>Seu perfil é Silver! Você já deu um passo importante, mas ainda há muitas conquistas pela frente.</Paragrafo>
+                <Paragrafo><a>Ver Mais</a></Paragrafo>
+              </div>
+            </Section>
+          </div>
+
+          <MeusCursos>
+           <PinkTag title="MEUS PROGRAMAS" />
+           <LinkCurso >
+            <Img src="https://hermes.dio.me/tracks/68c81887-a1c2-440d-a7ea-7777bc10cd41.png" width="30" />
+            <TituloCurso>Formacao React Developer</TituloCurso>
+           </LinkCurso>
+          </MeusCursos>
+
+          <MeusCursos>
+           <PinkTag title="MEUS CURSOS" />
+           <LinkCurso >
+            <Img src="https://hermes.dio.me/courses/badge/e830c6d2-0566-4c36-a5d9-d261fef2c57d.png" width="30" height="30" />
+            <TituloCurso>Construindo paginas para internet com Bootstrap</TituloCurso>
+           </LinkCurso>
+           <LinkCurso >
+            <Img src="https://hermes.dio.me/courses/badge/3c23b6a7-5963-4dc9-95e7-bacc3f8b0b2d.png" width="30" height="30" />
+            <TituloCurso>Introducao ao PHP</TituloCurso>
+           </LinkCurso>
+           <LinkCurso >
+            <Img src="https://hermes.dio.me/courses/badge/9923a300-e5c0-420d-b38c-26a24d307c33.png" width="30" height="30"/>
+            <TituloCurso>Formularios com condicionais e sessoes com PHP</TituloCurso>
+           </LinkCurso>
+          </MeusCursos>
+
+          <WrapperBotao>
+            <BotaoBranco>PRECISA DE AJUDA?</BotaoBranco>
+            <BotaoBranco>INDIQUE UM AMIGO</BotaoBranco>
+          </WrapperBotao>
+
+          </ProfileSpotlight>
+          
         </Column>
         <div></div>
         <Column flex={3}>
           <PinkTag title="FORMACOES RECOMENDADAS" />
           <p>Selecionamos para voce as formacoes com os melhores salarios do mercado</p>
-          <Teste />
+          <MyCarousel />
           <Title>FEED</Title>
           <Card />
           <Card />

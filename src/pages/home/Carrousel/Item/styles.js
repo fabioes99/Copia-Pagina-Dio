@@ -25,6 +25,7 @@ export const Close = styled.div`
     -webkit-box-pack: end;
     justify-content: flex-end;
     margin-top: 10px;
+    margin-right: 0.3rem;
 `
 
 export const WrapperImg = styled.div`

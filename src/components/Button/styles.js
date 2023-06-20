@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const ButtonContainer = styled.button`
-    width: 95%;
+    width: 80%;
     margin: 2.25rem auto;
     border-radius: 8px;
     padding: 0.6rem 1.5rem;
@@ -14,7 +14,7 @@ export const ButtonContainer = styled.button`
     cursor: default;
     opacity: 0.5;
     background-color: transparent;
-
+    text-align: center;
     ${props =>
         !props.disabled &&
         css`

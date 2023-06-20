@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import  Input  from '../../components/Input';
 import  Button  from '../../components/Button';
 import Header from '../../components/Header/header';
-import { MdEmail, MdLock} from 'react-icons/md'
+import { MdEmail, MdLock, MdFlag, MdPerson} from 'react-icons/md'
 import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -80,9 +80,9 @@ export default  function SignUp() {
             
             <Form onSubmit={handleSubmit(onSubmit)}>
               <SubTitleLogin>Crie sua conta e make the change.</SubTitleLogin>
-              <Input name="nome"      errorMessage={( errors.nome ? errors.nome.message : null  )}  control={control} placeholder="Nome completo" leftIcon={<MdEmail/>} />
+              <Input name="nome"      errorMessage={( errors.nome ? errors.nome.message : null  )}  control={control} placeholder="Nome completo" leftIcon={<MdPerson />} />
               <Input name="email"     errorMessage={( errors.email ? errors.email.message : null  )}  control={control} placeholder="Seu melhor @e-mail" leftIcon={<MdEmail/>} />
-              <Input name="telefone"  errorMessage={( errors.telefone ? errors.telefone.message : null  )}  control={control} placeholder="Celular ex:(11) 96123-4567" leftIcon={<MdEmail/>} />
+              <Input name="telefone"  errorMessage={( errors.telefone ? errors.telefone.message : null  )}  control={control} placeholder="Celular ex:(11) 96123-4567" leftIcon={<MdFlag/>} />
               <Input name="senha"     errorMessage={( errors.senha ? errors.senha.message : null  )}  control={control} placeholder="Senha" type="password" leftIcon={<MdLock/>}/>
               <Button isButtonEnabled={allElementsValid} title="Criar minha conta gratis" onclick={handleClickSignIn} type={"submit"} />
             </Form>
