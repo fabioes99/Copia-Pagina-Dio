@@ -50,7 +50,7 @@ export default  function SignUp() {
   }
 
   const handleClickSignIn = () => {
-    navigate('/feed');
+    navigate('/');
   }
 
 
@@ -66,7 +66,7 @@ export default  function SignUp() {
             <Title>
              A plataforma para voce aprender com expert, dominar as principais tecnologias e entrar mais rapido nas empresas mais desejadas.
             </Title>
-            <p style={{ marginTop: '2.4rem' }}> <Link nome={'VOLTAR PARA LOGIN'} link={'/login'} color={'rgb(127, 40, 181)'} /></p>
+            <p style={{ marginTop: '2.4rem' }}> <Link nome={'VOLTAR PARA LOGIN'} link={'/'} color={'rgb(127, 40, 181)'} /></p>
            
         </Column>
         <Column>
@@ -87,9 +87,9 @@ export default  function SignUp() {
               <Button isButtonEnabled={allElementsValid} title="Criar minha conta gratis" onclick={handleClickSignIn} type={"submit"} />
             </Form>
             <p style={{ fontSize: '0.8rem' }}>
-              Ao clicar em "criar minha conta gratis", declaro que aceito as <Link nome={'Politicas de Privacidade'} link={'/login'} color={'rgb(127, 40, 181)'} />  e os <Link nome={'Termos de Uso'} link={'/login'} color={'rgb(127, 40, 181)'} /> da DIO.
+              Ao clicar em "criar minha conta gratis", declaro que aceito as <Link nome={'Politicas de Privacidade'} color={'rgb(127, 40, 181)'} />  e os <Link nome={'Termos de Uso'} link={'/'} color={'rgb(127, 40, 181)'} /> da DIO.
             </p>
-            <p style={{ marginTop: '2.2rem' }}> Ja tenho conta. <Link nome={'Fazer login.'} link={'/login'} color={'#22DD7A'} /></p>
+            <p style={{ marginTop: '2.2rem' }}> Ja tenho conta. <Link nome={'Fazer login.'} onclick={handleClickSignIn} color={'#22DD7A'} /></p>
              
         </Wrapper>
         </Column>

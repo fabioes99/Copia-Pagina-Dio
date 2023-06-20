@@ -6,6 +6,7 @@ export const Container = styled.main`
   max-width: 80%;
   margin: 0 auto;
   margin-top: 3rem;
+  margin-left: 14rem!important;
 
   display: flex;
   flex-direction: row;
@@ -68,6 +69,11 @@ export const EsqueciText = styled.p`
   line-height: 19px;
 
   color: #E5E044;
+
+  &:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
 `
 
 
@@ -79,5 +85,10 @@ export const CriarText = styled.p`
   line-height: 19px;
 
   color: #E23DD7;
+
+  &:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
 `
 

@@ -14,14 +14,16 @@ export const Container = styled.div`
   align-items: center;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  max-width: 1200px;
   margin: 0px auto;
 `
 
 export const Image = styled.img`
   max-width: 85px;
-  margin-left: 1rem;
 `;
+
+export const SVGContainer = styled.div`
+  margin-left: 3rem;
+`
 
 export const LinkBotao = styled.a`
   border: 1px solid rgb(255, 255, 255);

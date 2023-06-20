@@ -31,7 +31,7 @@ export default  function Login() {
     try{
       const { data } = await api.get(`users?email=${formData.email}&senha=${formData.senha}`);
       if( data.length === 1){
-        navigate('/feed');
+        navigate('/home');
       }else{
         alert('Email ou senha invalido');
       }
@@ -40,8 +40,8 @@ export default  function Login() {
     }
   }
 
-  const handleClickSignIn = () => {
-    navigate('/feed');
+  const handleCriarConta = () => {
+    navigate('/sign-up');
   }
 
   return (
@@ -62,11 +62,11 @@ export default  function Login() {
             <form onSubmit={handleSubmit(onSubmit)}>
               <Input name="email"  errorMessage={( errors.email ? errors.email.message : null  )}  control={control} placeholder="E-mail" leftIcon={<MdEmail/>} />
               <Input name="senha"  errorMessage={( errors.senha ? errors.senha.message : null  )}  control={control} placeholder="Senha" type="password" leftIcon={<MdLock/>}/>
-              <Button title="Entrar" variant="secondary" onclick={handleClickSignIn} type="submit" />
+              <Button title="Entrar" variant="secondary" type="submit" />
             </form>
             <Row>
               <EsqueciText>Esqueci a minha senha</EsqueciText>
-              <CriarText>Criar a conta</CriarText>
+              <CriarText onClick={ handleCriarConta }>Criar a conta</CriarText>
             </Row>
         </Wrapper>
         </Column>
