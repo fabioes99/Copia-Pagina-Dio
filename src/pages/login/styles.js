@@ -5,7 +5,7 @@ export const Container = styled.main`
   width: 100%;
   max-width: 80%;
   margin: 0 auto;
-  margin-top:120px;
+  margin-top: 3rem;
 
   display: flex;
   flex-direction: row;
@@ -35,7 +35,7 @@ export const Title = styled.h2`
   font-weight: 700;
   font-size: 32px;
   width: 320px;
-  margin-bottom: 20px;
+  margin-bottom: 3rem;
   line-height: 44px;
 
   color: #fff;

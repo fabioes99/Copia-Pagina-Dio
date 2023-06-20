@@ -1,6 +1,6 @@
 import React from 'react'
 import  Input  from '../../components/Input';
-import  Button  from '../../components/Button';
+import  Button  from './Button';
 import Header from '../../components/Header/header';
 import { MdEmail, MdLock} from 'react-icons/md'
 import { useNavigate } from 'react-router-dom';
@@ -10,6 +10,7 @@ import * as yup from "yup";
 import { api } from '../../services/api'
 
 import { Column, Container, CriarText, EsqueciText, Row, SubTitleLogin, Title, TitleLogin, Wrapper} from './styles'
+import { LinhaRoxa } from './Button/styles';
 
 const schema = yup.object({
   email: yup.string().email('E-mail nao valido').required('Campo obrigatorio'),
@@ -48,13 +49,15 @@ export default  function Login() {
       <Header/>
       <Container>
         <Column>
+        <LinhaRoxa />
             <Title>
              A plataforma para voce aprender com expert, dominar as principais tecnologias e entrar mais rapido nas empresas mais desejadas.
             </Title>
         </Column>
         <Column>
+        <LinhaRoxa />
         <Wrapper>
-            <TitleLogin>Faca seu cadastro</TitleLogin>
+            <TitleLogin>Ja tem cadastro?</TitleLogin>
             <SubTitleLogin>Faca seu login e make the change.</SubTitleLogin>
             <form onSubmit={handleSubmit(onSubmit)}>
               <Input name="email"  errorMessage={( errors.email ? errors.email.message : null  )}  control={control} placeholder="E-mail" leftIcon={<MdEmail/>} />

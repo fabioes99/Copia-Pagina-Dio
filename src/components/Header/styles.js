@@ -1,6 +1,28 @@
 import styled from "styled-components";
 
 
+export const Nav = styled.nav ` 
+  background-color: rgb(21, 21, 21);
+  padding: 0.7rem;
+  display: block;
+`
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0px auto;
+`
+
+export const Image = styled.img`
+  max-width: 85px;
+  margin-left: 1rem;
+`;
+
 export const LinkBotao = styled.a`
   border: 1px solid rgb(255, 255, 255);
   margin: 0px 0.5rem;
@@ -101,22 +123,6 @@ export const Column = styled.div `
   align-items: center;
 `
 
-export const Nav = styled.nav ` 
-  background-color: rgb(21, 21, 21);
-  padding: 1rem;
-  display: block;
-`
-
-export const Container = styled.div`
-display: flex;
-  flex-direction: row;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0px auto;
-`
 
 export const BuscarInputContainer = styled.div `
   width:175px;
