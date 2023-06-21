@@ -3,7 +3,7 @@ import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import './styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { DivCoracao, NCoracao } from './styles.js'
+import { DivCoracao, NCoracao } from './styles'
 
 const DropdownHeart = () => {
 

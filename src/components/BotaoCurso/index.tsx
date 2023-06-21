@@ -1,7 +1,13 @@
-import React from 'react'
 import { Linguagem, Teste, Titulo, Imagem} from './styles'
 
-export default function BotaoCurso({title, linguagem, src}) {
+interface Button {
+  title: string;
+  linguagem: string;
+  src: string;
+}
+
+export default function BotaoCurso({title, linguagem, src}:Button) {
+
   return (
     <Teste>
       <Imagem src={src} />

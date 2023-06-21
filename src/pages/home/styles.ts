@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface IFlex{
+  flex: number;
+}
+
 export const Container = styled.main`
   display: flex;
   flex-wrap: wrap;
@@ -159,7 +163,7 @@ export const LinkBotao = styled.a`
   }   
 `
 
-export const Column = styled.p`
+export const Column = styled.p<IFlex>`
   padding-right: 30px;
   flex: ${({ flex }) => flex };
 `

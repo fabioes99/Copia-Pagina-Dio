@@ -2,9 +2,17 @@ import React, { useState, useRef, useEffect } from 'react';
 import { IconContainer, ErrorText, InputContainer, InputText} from './styles'
 import { Controller } from "react-hook-form";
 
-export default function Input({leftIcon, name , control, errorMessage, mudacor,  ...rest}) {
+interface InputI extends React.InputHTMLAttributes<HTMLInputElement>{
+  leftIcon: React.ReactNode;
+  name: string;
+  control: any;
+  errorMessage?: string;
+  mudacor?: string;
+}
+
+export default function Input({leftIcon, name , control, errorMessage, mudacor, ...rest}:InputI) {
   const [clicked, setClicked] = useState(false);
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLDivElement>(null);
 
   const handleClick = () => {
     setClicked(true);
@@ -15,8 +23,8 @@ export default function Input({leftIcon, name , control, errorMessage, mudacor, 
   };
 
   useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (inputRef.current && !inputRef.current.contains(event.target)) {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (inputRef.current && !inputRef.current.contains(event.target as Node)) {
         setClicked(false);
       }
     }
@@ -37,11 +45,11 @@ export default function Input({leftIcon, name , control, errorMessage, mudacor, 
           control={control}
           name={name}
           rules={{ required: true }}
-          render={({ field }) => (
+          render={({ field: { value, onBlur} }) => (
             <InputText
-              onClick={handleClick}
               onBlur={handleBlur}
-              {...field}
+              onClick={handleClick}
+              value={value}
               {...rest}
             />
           )}

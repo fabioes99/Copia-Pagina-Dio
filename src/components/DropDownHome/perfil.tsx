@@ -4,7 +4,7 @@ import './styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
-import { UserPicture, Teste } from './styles.js'
+import { UserPicture, Teste } from './styles'
 
 const DropdownPerfil = () => {
 

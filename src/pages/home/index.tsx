@@ -6,12 +6,13 @@ import { CaretRight } from 'phosphor-react';
 import  Card  from '../../components/Card';
 import Ranking from '../../components/Ranking';
 import PinkTag from '../../components/PinkTag';
+// @ts-ignore
 import MyCarousel from './Carrousel/index';
 import ProgressBadge from './Progress';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
-import {ProfileSpotlight, LinkCurso, Teste, Img, BotaoBranco, ContainerProgress, WrapperBotao, Paragrafo, Section, Badge, TituloCurso, Info, WrapperUser, PerfilLink, Nome, Nivel, NomeCompleto, Xperience, WrapperSwitch, LinkPerfil, Column, MeusCursos, Container, Title, UserPicture} from './styles'
+import {ProfileSpotlight, LinkCurso, Img, BotaoBranco, ContainerProgress, WrapperBotao, Paragrafo, Section, Badge, TituloCurso, Info, WrapperUser, PerfilLink, Nome, Nivel, NomeCompleto, Xperience, WrapperSwitch, LinkPerfil, Column, MeusCursos, Container, Title, UserPicture} from './styles'
 import BotaoCurso from '../../components/BotaoCurso';
 
 

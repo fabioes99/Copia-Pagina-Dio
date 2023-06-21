@@ -10,7 +10,7 @@ const DropdownHome = () => {
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
         <button className="IconButton" aria-label="Customise options">
-        <FontAwesomeIcon icon={faCircleQuestion} size='xl' style={{"--fa-secondary-color": "#ffffff",}} />
+        <FontAwesomeIcon icon={faCircleQuestion} size='xl' />
         </button>
       </DropdownMenu.Trigger>
 

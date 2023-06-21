@@ -1,6 +1,5 @@
 import Home from "./pages/home";
 import Login from "./pages/login";
-import Teste from "./pages/home/Carrousel";
 import React, { useEffect, useState } from 'react';
 import SignUp from "./pages/sign-up";
 import {
@@ -30,7 +29,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/teste" element={<Teste />} />
         <Route path="/home" element={<Home />} />
       </Routes>
     </Router>

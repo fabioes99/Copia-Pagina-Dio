@@ -1,7 +1,11 @@
 import React from 'react'
 import { DivPink, TitleHighlight, Wrapper } from './styles'
 
-export default function PinkTag({title}) {
+interface IPinkTag{
+  title: string;
+}
+
+export default function PinkTag({title}: IPinkTag) {
   return (
     <Wrapper>
       <TitleHighlight>{title}</TitleHighlight>

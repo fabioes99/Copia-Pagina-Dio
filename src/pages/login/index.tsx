@@ -1,7 +1,7 @@
 import React from 'react'
 import  Input  from '../../components/Input';
 import  Button  from './Button';
-import Header from '../../components/Header/header';
+import Header from '../../components/Header';
 import { MdEmail, MdLock} from 'react-icons/md'
 import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
@@ -21,13 +21,17 @@ export default  function Login() {
 
   const navigate = useNavigate();
 
-  const { control, handleSubmit, formState: { errors } } = useForm({
+  interface IFormData{
+    email: string;
+    senha: string;
+  }
+
+  const { control, handleSubmit, formState: { errors } } = useForm<IFormData>({
     resolver: yupResolver(schema),
     mode: 'onChange'
   });
 
-
-  const onSubmit = async formData => {
+  const onSubmit = async (formData: IFormData) => {
     try{
       const { data } = await api.get(`users?email=${formData.email}&senha=${formData.senha}`);
       if( data.length === 1){
@@ -60,9 +64,9 @@ export default  function Login() {
             <TitleLogin>Ja tem cadastro?</TitleLogin>
             <SubTitleLogin>Faca seu login e make the change.</SubTitleLogin>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <Input name="email"  errorMessage={( errors.email ? errors.email.message : null  )}  control={control} placeholder="E-mail" leftIcon={<MdEmail/>} />
-              <Input name="senha"  errorMessage={( errors.senha ? errors.senha.message : null  )}  control={control} placeholder="Senha" type="password" leftIcon={<MdLock/>}/>
-              <Button title="Entrar" variant="secondary" type="submit" />
+              <Input name="email"  errorMessage={( errors.email ? errors.email.message : undefined  )}  control={control} placeholder="E-mail" leftIcon={<MdEmail/>} />
+              <Input name="senha"  errorMessage={( errors.senha ? errors.senha.message : undefined  )}  control={control} placeholder="Senha" type="password" leftIcon={<MdLock/>}/>
+              <Button title="Entrar" onClick={handleCriarConta} />
             </form>
             <Row>
               <EsqueciText>Esqueci a minha senha</EsqueciText>

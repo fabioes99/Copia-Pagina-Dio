@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import  Input  from '../../components/Input';
 import  Button  from '../../components/Button';
-import Header from '../../components/Header/header';
+import Header from '../../components/Header';
 import { MdEmail, MdLock, MdFlag, MdPerson} from 'react-icons/md'
 import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
@@ -26,7 +26,14 @@ export default  function SignUp() {
 
   const navigate = useNavigate();
 
-  const { control, handleSubmit, formState: { errors }, watch } = useForm({
+  interface IFormData{
+    email: string;
+    senha: string;
+    nome: string;
+    telefone: string;
+  }
+
+  const { control, handleSubmit, formState: { errors }, watch } = useForm<IFormData>({
     resolver: yupResolver(schema),
     mode: 'onSubmit'
   });
@@ -35,9 +42,8 @@ export default  function SignUp() {
 
   const allElementsValid = testValue.every((element) => element !== '' && element !== undefined);
 
-  const onSubmit = async data => {
-    console.log(data);
-   /* try{
+  const onSubmit = async (formData: IFormData) => {
+    try{
       const { data } = await api.get(`users?email=${formData.email}&senha=${formData.senha}`);
       if( data.length === 1){
         navigate('/feed');
@@ -46,7 +52,7 @@ export default  function SignUp() {
       }
     }catch{
       alert('houve um erro');
-    } */
+    } 
   }
 
   const handleClickSignIn = () => {
@@ -80,16 +86,16 @@ export default  function SignUp() {
             
             <Form onSubmit={handleSubmit(onSubmit)}>
               <SubTitleLogin>Crie sua conta e make the change.</SubTitleLogin>
-              <Input name="nome"      errorMessage={( errors.nome ? errors.nome.message : null  )}  control={control} placeholder="Nome completo" leftIcon={<MdPerson />} />
-              <Input name="email"     errorMessage={( errors.email ? errors.email.message : null  )}  control={control} placeholder="Seu melhor @e-mail" leftIcon={<MdEmail/>} />
-              <Input name="telefone"  errorMessage={( errors.telefone ? errors.telefone.message : null  )}  control={control} placeholder="Celular ex:(11) 96123-4567" leftIcon={<MdFlag/>} />
-              <Input name="senha"     errorMessage={( errors.senha ? errors.senha.message : null  )}  control={control} placeholder="Senha" type="password" leftIcon={<MdLock/>}/>
-              <Button isButtonEnabled={allElementsValid} title="Criar minha conta gratis" onclick={handleClickSignIn} type={"submit"} />
+              <Input name="nome"      errorMessage={( errors.nome ? errors.nome.message : undefined  )}  control={control} placeholder="Nome completo" leftIcon={<MdPerson />} />
+              <Input name="email"     errorMessage={( errors.email ? errors.email.message : undefined  )}  control={control} placeholder="Seu melhor @e-mail" leftIcon={<MdEmail/>} />
+              <Input name="telefone"  errorMessage={( errors.telefone ? errors.telefone.message : undefined  )}  control={control} placeholder="Celular ex:(11) 96123-4567" leftIcon={<MdFlag/>} />
+              <Input name="senha"     errorMessage={( errors.senha ? errors.senha.message : undefined  )}  control={control} placeholder="Senha" type="password" leftIcon={<MdLock/>}/>
+              <Button isButtonEnabled={allElementsValid} title="Criar minha conta gratis" onClick={handleClickSignIn} />
             </Form>
             <p style={{ fontSize: '0.8rem' }}>
               Ao clicar em "criar minha conta gratis", declaro que aceito as <Link nome={'Politicas de Privacidade'} color={'rgb(127, 40, 181)'} />  e os <Link nome={'Termos de Uso'} link={'/'} color={'rgb(127, 40, 181)'} /> da DIO.
             </p>
-            <p style={{ marginTop: '2.2rem' }}> Ja tenho conta. <Link nome={'Fazer login.'} onclick={handleClickSignIn} color={'#22DD7A'} /></p>
+            <p style={{ marginTop: '2.2rem' }}> Ja tenho conta. <Link nome={'Fazer login.'} onClick={handleClickSignIn} color={'#22DD7A'} /></p>
              
         </Wrapper>
         </Column>

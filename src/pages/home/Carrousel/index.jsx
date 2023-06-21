@@ -29,7 +29,8 @@ function MyCarousel() {
     }
   };
 
-  const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+
+  const ButtonGroup = ({ next, previous, ...rest }: IGroup) => {
     const { carouselState: { currentSlide } } = rest;
     return (
       <div className="carousel-button-group">

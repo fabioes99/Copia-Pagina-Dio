@@ -19,9 +19,9 @@ import {
   LinkAmarelo,
   Image,
   Sino
-} from './styles.js'
+} from './styles'
 
-function HeaderLogin({autenticado}) {
+function HeaderLogin() {
 
   return (
     <Header>  
