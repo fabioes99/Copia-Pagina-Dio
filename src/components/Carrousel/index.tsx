@@ -42,31 +42,31 @@ function Teste() {
         Carreira <br />Back-end
         </TituloCarrossel>
         <SpanCarrossel>
-       Formacao Java Developer
+       FormaçãoJava Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao .NET Developer
+          Formação .NET Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao Python Developer
+          FormaçãoPython Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao TypeScript Fullstack Developer
+          FormaçãoTypeScript Fullstack Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao PHP Experience
+          FormaçãoPHP Experience
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao PHP Developer
+          FormaçãoPHP Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao Ruby Developer
+          FormaçãoRuby Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao Programacao Reativa com Spring WebFlux
+          FormaçãoProgramacao Reativa com Spring WebFlux
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao C/C++ Developer
+          FormaçãoC/C++ Developer
         </SpanCarrossel>
         <ContainerAtividade>
           <Atividade>
@@ -87,31 +87,31 @@ function Teste() {
         Carreira <br />Back-end
         </TituloCarrossel>
         <SpanCarrossel>
-          Formacao Java Developer
+          FormaçãoJava Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao .NET Developer
+          Formação .NET Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao Python Developer
+          FormaçãoPython Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao TypeScript Fullstack Developer
+          FormaçãoTypeScript Fullstack Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao PHP Experience
+          FormaçãoPHP Experience
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao PHP Developer
+          FormaçãoPHP Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao Ruby Developer
+          FormaçãoRuby Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao Programacao Reativa com Spring WebFlux
+          FormaçãoProgramacao Reativa com Spring WebFlux
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao C/C++ Developer
+          FormaçãoC/C++ Developer
         </SpanCarrossel>
         <ContainerAtividade>
           <Atividade>
@@ -130,75 +130,31 @@ function Teste() {
         Carreira <br />Back-end
         </TituloCarrossel>
         <SpanCarrossel>
-          Formacao Java Developer
+          FormaçãoJava Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao .NET Developer
+          Formação .NET Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao Python Developer
+          FormaçãoPython Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao TypeScript Fullstack Developer
+          FormaçãoTypeScript Fullstack Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao PHP Experience
+          FormaçãoPHP Experience
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao PHP Developer
+          FormaçãoPHP Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao Ruby Developer
+          FormaçãoRuby Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao Programacao Reativa com Spring WebFlux
+          FormaçãoProgramacao Reativa com Spring WebFlux
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao C/C++ Developer
-        </SpanCarrossel>
-        <ContainerAtividade>
-          <Atividade>
-            0 atividades
-          </Atividade>
-          <Atividade>
-            0 projetos
-          </Atividade>
-        </ContainerAtividade>
-        <LinkBotao>
-          VerCarreira
-        </LinkBotao>
-      </ContainerCarrossel>
-
-      <ContainerCarrossel>
-        <TituloCarrossel>
-        Carreira <br />Back-end
-        </TituloCarrossel>
-        <SpanCarrossel>
-          Formacao Java Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao .NET Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao Python Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao TypeScript Fullstack Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao PHP Experience
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao PHP Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao Ruby Developer
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao Programacao Reativa com Spring WebFlux
-        </SpanCarrossel>
-        <SpanCarrossel>
-          Formacao C/C++ Developer
+          FormaçãoC/C++ Developer
         </SpanCarrossel>
         <ContainerAtividade>
           <Atividade>
@@ -218,31 +174,75 @@ function Teste() {
         Carreira <br />Back-end
         </TituloCarrossel>
         <SpanCarrossel>
-          Formacao Java Developer
+          FormaçãoJava Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao .NET Developer
+          Formação .NET Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao Python Developer
+          FormaçãoPython Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao TypeScript Fullstack Developer
+          FormaçãoTypeScript Fullstack Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao PHP Experience
+          FormaçãoPHP Experience
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao PHP Developer
+          FormaçãoPHP Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao Ruby Developer
+          FormaçãoRuby Developer
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao Programacao Reativa com Spring WebFlux
+          FormaçãoProgramacao Reativa com Spring WebFlux
         </SpanCarrossel>
         <SpanCarrossel>
-          Formacao C/C++ Developer
+          FormaçãoC/C++ Developer
+        </SpanCarrossel>
+        <ContainerAtividade>
+          <Atividade>
+            0 atividades
+          </Atividade>
+          <Atividade>
+            0 projetos
+          </Atividade>
+        </ContainerAtividade>
+        <LinkBotao>
+          VerCarreira
+        </LinkBotao>
+      </ContainerCarrossel>
+
+      <ContainerCarrossel>
+        <TituloCarrossel>
+        Carreira <br />Back-end
+        </TituloCarrossel>
+        <SpanCarrossel>
+          FormaçãoJava Developer
+        </SpanCarrossel>
+        <SpanCarrossel>
+          Formação .NET Developer
+        </SpanCarrossel>
+        <SpanCarrossel>
+          FormaçãoPython Developer
+        </SpanCarrossel>
+        <SpanCarrossel>
+          FormaçãoTypeScript Fullstack Developer
+        </SpanCarrossel>
+        <SpanCarrossel>
+          FormaçãoPHP Experience
+        </SpanCarrossel>
+        <SpanCarrossel>
+          FormaçãoPHP Developer
+        </SpanCarrossel>
+        <SpanCarrossel>
+          FormaçãoRuby Developer
+        </SpanCarrossel>
+        <SpanCarrossel>
+          FormaçãoProgramacao Reativa com Spring WebFlux
+        </SpanCarrossel>
+        <SpanCarrossel>
+          FormaçãoC/C++ Developer
         </SpanCarrossel>
         <ContainerAtividade>
           <Atividade>

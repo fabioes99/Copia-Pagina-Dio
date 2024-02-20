@@ -1,25 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import HeaderLogin from '../../components/HeaderLogin';
 import ProgressDemo from '../../components/Progress';
 import SwitchDemo from '../../components/Switch';
 import { CaretRight } from 'phosphor-react';
-import  Card  from '../../components/Card';
+import Card  from '../../components/Card';
 import Ranking from '../../components/Ranking';
 import PinkTag from '../../components/PinkTag';
 // @ts-ignore
 import MyCarousel from './Carrousel/index';
 import ProgressBadge from './Progress';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 import {ProfileSpotlight, LinkCurso, Img, BotaoBranco, ContainerProgress, WrapperBotao, Paragrafo, Section, Badge, TituloCurso, Info, WrapperUser, PerfilLink, Nome, Nivel, NomeCompleto, Xperience, WrapperSwitch, LinkPerfil, Column, MeusCursos, Container, Title, UserPicture} from './styles'
 import BotaoCurso from '../../components/BotaoCurso';
+import { AuthContext } from '../../context/auth';
+import '@radix-ui/themes/styles.css';
 
 
 function Home() {
 
+  const { user } = useContext( AuthContext );
+
+  
+
   return (
-    <> 
+    <div> 
       <HeaderLogin/>
       <Container>
       <Column flex={1.6}>
@@ -29,7 +33,7 @@ function Home() {
         </WrapperUser> 
           <Info>
             <Nome>
-              <NomeCompleto>Fabio Simoes</NomeCompleto>
+              <NomeCompleto>{user.username}</NomeCompleto>
               <Nivel>Nivel 6</Nivel>
             </Nome>
             <Xperience>
@@ -45,17 +49,16 @@ function Home() {
           <LinkPerfil href='/'>Visualizar meu Perfil <CaretRight size={26} color="white" /></LinkPerfil>
 
           <div>
-            <p>Forca do perfil na DIO: <strong>SILVER</strong></p>
+            <span>Força do perfil na DIO: <strong>SILVER</strong></span>
             <ContainerProgress>
-              <FontAwesomeIcon icon={faStar} size='xl' style={{color: "#ededed", position: "absolute", zIndex: "999", left: "94px",top: "391px",}} />
-              <FontAwesomeIcon icon={faStar} size='xl' style={{color: "#1D222C", position: "absolute", zIndex: "999", left: "308px",top: "391px"}} />
+             
               <ProgressBadge />
             </ContainerProgress>
             <Section>
               <Badge src="https://hermes.dio.me/assets/profile-force/silver.png" />
               <div>
-                <Paragrafo>Seu perfil � Silver! Voc� j� deu um passo importante, mas ainda h� muitas conquistas pela frente.</Paragrafo>
-                <Paragrafo><a>Ver Mais</a></Paragrafo>
+                <Paragrafo>Seu perfil é Silver! Você já deu um passo importante, mas ainda há muitas conquistas pela frente.</Paragrafo>
+                <Paragrafo><div className=''>Ver Mais</div></Paragrafo>
               </div>
             </Section>
           </div>
@@ -64,7 +67,7 @@ function Home() {
            <PinkTag title="MEUS PROGRAMAS" />
            <LinkCurso >
             <Img src="https://hermes.dio.me/tracks/68c81887-a1c2-440d-a7ea-7777bc10cd41.png" width="30" />
-            <TituloCurso>Formacao React Developer</TituloCurso>
+            <TituloCurso>Formação React Developer</TituloCurso>
            </LinkCurso>
           </MeusCursos>
 
@@ -92,10 +95,9 @@ function Home() {
           </ProfileSpotlight>
           
         </Column>
-        <div></div>
         <Column flex={3}>
-          <PinkTag title="FORMACOES RECOMENDADAS" />
-          <p>Selecionamos para voce as formacoes com os melhores salarios do mercado</p>
+          <PinkTag title="FORMAÇÕES RECOMENDADAS" />
+          <span>Selecionamos para você as formações com os melhores salarios do mercado</span>
           <MyCarousel />
           <Title>FEED</Title>
           <Card />
@@ -106,10 +108,10 @@ function Home() {
           <Card />
         </Column>
         <Column flex={1.3}>
-          <PinkTag title="TOP PROJETOS PARA VOCE" />
+          <PinkTag title="TOP PROJETOS PARA VOCÊ" />
           <BotaoCurso src="https://hermes.dio.me/lab_projects/badges/f89509e4-3dc8-4ca8-acfa-27ed2b42e9a6.png" title="MySql - Modelando um Banco de uma Loja de Jogos" linguagem="MySQL" />
           <BotaoCurso src="https://hermes.dio.me/lab_projects/badges/827f14cb-aef8-4f78-8a5a-7a78e7ec96ad.png" title="MySql - Como Modelar um Banco de Controle de Se..." linguagem="MySQL" />
-          <BotaoCurso src="https://hermes.dio.me/lab_projects/badges/f89509e4-3dc8-4ca8-acfa-27ed2b42e9a6.png" title="Construindo uma Aplicacao MVC com Laravel 7 par..." linguagem="Laravel" />
+          <BotaoCurso src="https://hermes.dio.me/lab_projects/badges/f89509e4-3dc8-4ca8-acfa-27ed2b42e9a6.png" title="Construindo uma aplicação  MVC com Laravel 7 par..." linguagem="Laravel" />
           <PinkTag title="RANKING DA SEMANA" />
           <Ranking percentual={34} nome="Fabio Simoes" image="https://avatars.githubusercontent.com/u/59034232?v=4" />
           <Ranking percentual={54} nome="Fabio Simoes" image="https://avatars.githubusercontent.com/u/59034232?v=4" />
@@ -120,8 +122,9 @@ function Home() {
       
       </Container>
 
-    </>
+    </div>
   )
+
 }
 
 

@@ -3,13 +3,11 @@ import { ButtonContainer } from './styles'
 
 interface IButton{
   title: string;
-  onClick: () => void;
-  isButtonEnabled?: boolean;
 }
 
-export default function Button({title, onClick, isButtonEnabled }:IButton) {
+export default function Button({title }:IButton) {
   return (
-    <ButtonContainer onClick={onClick} type="submit" disabled={!isButtonEnabled}>
+    <ButtonContainer  type="submit" >
       {title}
     </ButtonContainer>
   )

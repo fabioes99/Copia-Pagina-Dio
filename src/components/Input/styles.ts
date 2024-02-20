@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+export const WrapContainer = styled.div`
+  margin-bottom: 30px;
+`
 
 export const InputContainer = styled.div`
   width:100%;
@@ -7,8 +10,8 @@ export const InputContainer = styled.div`
   border-bottom: 2px solid black;
   transition: border-bottom 0.3s ease;
   display: flex;
+  
   align-items: center;
-  margin-bottom: 28px;
 
   &.clicked {
     border-bottom-color: rgb(127, 40, 181);
@@ -37,6 +40,6 @@ export const ErrorText = styled.p`
   border-bottom-right-radius: 0.5rem;
   text-transform: uppercase;
   padding: 0.25rem 0.5rem;
-  width: 900px;
+  width: auto;
 }
 `

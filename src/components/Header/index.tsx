@@ -28,7 +28,7 @@ function Header() {
   const navigate = useNavigate();
 
   const handleClickSignIn = () => {
-    navigate('/login');
+    navigate('/');
   }
 
   const handleCriarConta = () => {

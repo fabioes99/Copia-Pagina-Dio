@@ -20,18 +20,18 @@ export default function Card() {
           <UserPicture src="https://avatars.githubusercontent.com/u/59034232?v=4" />
           <div>
             <h4>Fabio Simoes</h4>
-            <p>Ha 9 minutos</p>
+            <span>Ha 9 minutos</span>
           </div>
         </UserInfo>
         <PostInfo>
           <h4>Projeto para curso de React</h4>
-          <p>Projeto feito para o curso de React no bootcamp...<strong>Saiba Mais</strong></p>
+          <span>Projeto feito para o curso de React no bootcamp...<strong>Saiba Mais</strong></span>
         </PostInfo>
         <HasInfo>
           <h4>#Html #Css #JavaScript</h4>
-          <p>
+          <span>
             <FiThumbsUp /> 16
-          </p>
+          </span>
         </HasInfo>
       </Content>
     </CardContainer>

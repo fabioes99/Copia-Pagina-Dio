@@ -24,7 +24,7 @@ const DropdownHeart = () => {
           </DropdownMenu.Item>
           <DropdownMenu.Separator className="DropdownMenuSeparator" />
           <DropdownMenu.Item className="Item">
-            Voce esta com todos os hearts completos!
+            Você esta com todos os hearts completos!
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>

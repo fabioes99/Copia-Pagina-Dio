@@ -180,6 +180,7 @@ export const LinkCurso = styled.a`
   &:hover{
     background-color: #2E343B;
     border-radius: 7px;
+    cursor: pointer;
   }
 `
 export const Img = styled.img`

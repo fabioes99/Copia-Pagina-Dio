@@ -1,13 +1,11 @@
 import Home from "./pages/home";
 import Login from "./pages/login";
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import SignUp from "./pages/sign-up";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from 'react-router-dom'
+import { AuthContextProvider } from "./context/auth";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import FontFaceObserver from 'fontfaceobserver'; 
+
 
 function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -24,14 +22,22 @@ function App() {
     return <div>Carregando as fontes...</div>;
   }
 
+  
+
   return (
+    
+    
     <Router>
-      <Routes>
+      <AuthContextProvider>
+       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/home" element={<Home />} />
-      </Routes>
+        <Route path="/home" element={ <Home /> } />
+        </Routes>
+      </AuthContextProvider>
     </Router>
+   
+    
   );
 }
 

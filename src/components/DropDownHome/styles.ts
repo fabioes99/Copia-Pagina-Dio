@@ -23,6 +23,6 @@ export const NCoracao = styled.span`
   color: rgb(250, 250, 250) !important;
 `
 
-export const Teste = styled.div`
+export const Margin = styled.div`
   margin-left: 1rem;
 `

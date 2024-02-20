@@ -1,15 +1,18 @@
-import React from 'react';
+import React,{useContext} from 'react'
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import './styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { AuthContext } from '../../context/auth';
 
-import { UserPicture, Teste } from './styles'
+import { UserPicture, Margin } from './styles'
 
 const DropdownPerfil = () => {
 
+  const { handleSignOut } = useContext( AuthContext );
+
   return (
-    <Teste>
+    <Margin>
     <DropdownMenu.Root >
       <DropdownMenu.Trigger asChild>
         <button className="IconButton" aria-label="Customise options">
@@ -38,13 +41,13 @@ const DropdownPerfil = () => {
 
           <DropdownMenu.Separator className="DropdownMenuSeparator" />
          
-          <DropdownMenu.Item className="DropdownMenuItem">
+          <DropdownMenu.Item className="DropdownMenuItem" onClick={handleSignOut}>
             Sair
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
     </DropdownMenu.Root>
-    </Teste>
+    </Margin>
     
   );
 };
